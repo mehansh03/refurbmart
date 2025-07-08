@@ -35,27 +35,47 @@ function App() {
               placeholder="Search laptops..."
               className="w-full p-4 border-gray-300 rounded-md outline-0 bg-gray-100 hidden md:block text-black mb-2"
             />
-            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-
-              <li className="bg-gray-50 rounded shadow transform scale-100 transition-transform duration-300 ease-in-out hover:scale-105 p-4">
-                <Link>
-                  <h3 className="text-lg font-bold">MacBook Air</h3>
+            <ul className="grid lg:grid-cols-4 x:grid-cols-5 sm:grid-cols-2 md:grid-cols-3 gap-2">
+              <li className="bg-gray-50 rounded shadow transform scale-100
+                 transition-transform duration-300 ease-in-out hover:scale-105
+                 p-4 flex flex-col items-center max-w-xs w-full">
+                <Link className="flex flex-col items-center">
+                  <h3 className="text-lg font-bold text-center">MacBook Air</h3>
+                  <img
+                    src="https://m.media-amazon.com/images/I/316ArzLeJ2L._SX300_SY300_QL70_FMwebp_.jpg"
+                    alt="macbook air"
+                    className="object-contain max-w-full h-auto my-2"
+                  />
                   <p className="text-gray-600">₹92,000</p>
                 </Link>
               </li>
 
 
-              <li className="bg-gray-50 rounded shadow transform scale-100 transition-transform duration-300 ease-in-out hover:scale-105 p-4">
-                <Link>
-                  <h3 className="text-lg font-bold">Dell XPS 13</h3>
+              <li className="bg-gray-50 rounded shadow transform scale-100
+                 transition-transform duration-300 ease-in-out hover:scale-105
+                 p-4 flex flex-col items-center max-w-xs w-full">
+                <Link className="flex flex-col items-center">
+                  <h3 className="text-lg font-bold text-center">Dell XPS 13</h3>
+                  <img
+                    src="https://m.media-amazon.com/images/I/316ArzLeJ2L._SX300_SY300_QL70_FMwebp_.jpg"
+                    alt="macbook air"
+                    class="object-contain max-w-full h-auto my-2"
+                  />
                   <p className="text-gray-600">₹1,10,000</p>
                 </Link>
               </li>
 
 
-              <li className="bg-gray-50 rounded shadow transform scale-100 transition-transform duration-300 ease-in-out hover:scale-105 p-4">
-                <Link>
-                  <h3 className="text-lg font-bold">HP Spectre x360</h3>
+              <li className="bg-gray-50 rounded shadow transform scale-100
+                 transition-transform duration-300 ease-in-out hover:scale-105
+                 p-4 flex flex-col items-center max-w-xs w-full">
+                <Link className="flex flex-col items-center">
+                  <h3 className="text-lg font-bold text-center">HP Spectre x360</h3>
+                  <img
+                    src="https://m.media-amazon.com/images/I/316ArzLeJ2L._SX300_SY300_QL70_FMwebp_.jpg"
+                    alt="macbook air"
+                    class="object-contain max-w-full h-auto my-2"
+                  />
                   <p className="text-gray-600">₹95,000</p>
                 </Link>
               </li>

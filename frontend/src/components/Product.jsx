@@ -34,19 +34,19 @@ const Product = () => {
     <div className="min-h-screen p-4 md:p-8">
       <Card className="max-w-6xl mx-auto my-28">
         <CardContent className="p-0">
-          <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
+          <div className="grid md:grid-cols-2 md:gap-40 p-8 ">
             {/* Product Image */}
-            <div className="flex justify-center items-center bg-gray-100 rounded-2xl p-20">
+            <div class="flex justify-center items-center bg-gray-100 rounded-2xl">
               <img
-                src="/placeholder.svg"
+                src="https://m.media-amazon.com/images/I/316ArzLeJ2L._SX300_SY300_QL70_FMwebp_.jpg"
                 alt="Apple MacBook Air M1"
-                className="object-contain max-w-full h-auto"
+                class="object-contain w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
               />
             </div>
 
             {/* Product Details */}
             <div className="flex flex-col justify-center space-y-6">
-              <div className="space-y-4">
+              <div className="space-y-4 mt-3">
                 <Badge variant="secondary">Apple</Badge>
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900">MacBook Air</h1>
                 <p className="text-xl text-gray-600">Supercharged by M1 chip</p>
@@ -63,7 +63,7 @@ const Product = () => {
                     </div>
                     <div className="flex flex-col">
                       <span className="text-sm text-gray-500">Display</span>
-                      <span className="font-medium">14" Retina</span>
+                      <span className="font-medium">13" Retina</span>
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -79,7 +79,7 @@ const Product = () => {
                       <span className="text-sm text-gray-500">Seller</span>
                       <span className="font-medium">piyushdhamecha327</span>
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
