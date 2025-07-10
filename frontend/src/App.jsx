@@ -1,5 +1,6 @@
 import './App.css';
 import { Link } from "react-router-dom"
+import { Plus } from "lucide-react"
 
 function App() {
   return (
@@ -85,6 +86,16 @@ function App() {
 
         </div>
       </div>
+
+      <button
+        className="fixed bottom-6 right-6 w-14 h-14 bg-[#6f6d6d] hover:bg-[#6f6d6d] 
+                   text-white rounded-full shadow-lg hover:shadow-xl 
+                   transition-all duration-300 ease-in-out transform hover:scale-110
+                   flex items-center justify-center z-50 
+                   focus:outline-none"
+        aria-label="Add new item">
+        <Plus className="w-6 h-6" />
+      </button>
     </>
   );
 }
