@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* override Chrome / WebKit autofill background */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: inset 0 0 0 1000px #F1F1F1 !important; /* use bg color you want */
+  -webkit-text-fill-color: #374151 !important; /* stone-700 text */
+  transition: background-color 5000s ease-in-out 0s;
+}
