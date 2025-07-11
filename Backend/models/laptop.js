@@ -1,17 +1,13 @@
-
 const mongoose = require('mongoose');
 
-const LaptopSchema = new mongoose.Schema({
-  brand: String,
-  model: String,
-  processor: String,
-  ram: String,
-  storage: String,
-  price: Number,
-  condition: { type: String, enum: ['Excellent', 'Good', 'Fair'] },
-  availability: { type: Boolean, default: true },
+const laptopSchema = mongoose.Schema({
+  brand: { type: String, required: true },
+  model: { type: String, required: true },
+  specs: { type: String },
+  price: { type: Number, required: true },
+  condition: { type: String, enum: ['New', 'Refurbished', 'Used'], default: 'Used' },
+  seller: { type: mongoose.Schema.Types.ObjectId, ref: 'user' },  
+  isSold: { type: Boolean, default: false }
 }, { timestamps: true });
 
-module.exports = mongoose.model('laptop', LaptopSchema);
-
-
+module.exports = mongoose.model('Laptop', laptopSchema);
