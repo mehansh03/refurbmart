@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const laptopController = require('../controllers/laptopController');
+const {
+  getLaptops,
+  getLaptopById,
+  createLaptop,
+  updateLaptop,
+  deleteLaptop,
+} = require('../controllers/laptopController');
+const { protect } = require('../middleware/authMiddleware');
 
-router.get('/', laptopController.getAllLaptops);
-router.get('/:id', laptopController.getLaptopById);
-router.post('/', laptopController.createLaptop);
-router.put('/:id', laptopController.updateLaptop);
-router.delete('/:id', laptopController.deleteLaptop);
+router.route('/').get(getLaptops).post(protect, createLaptop);
+router.route('/:id').get(getLaptopById).put(protect, updateLaptop).delete(protect, deleteLaptop);
 
 module.exports = router;
