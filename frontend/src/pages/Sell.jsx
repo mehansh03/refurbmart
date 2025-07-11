@@ -75,19 +75,19 @@ const Sell = () => {
               id="name"
               type="text"
               placeholder="Product name"
-              className="shadow-sm border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#66aaff] focus:border-[#66aaff]"
+              className="shadow-sm border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2"
             />
           </div>
 
           <div>
             <label className="block text-gray-700 font-medium mb-1" htmlFor="processor">
-              Processor
+              Processor(s)
             </label>
             <input
               id="processor"
               type="text"
-              placeholder="Processor"
-              className="shadow-sm border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#66aaff] focus:border-[#66aaff]"
+              placeholder="CPU/GPU in this format"
+              className="shadow-sm border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2"
             />
           </div>
 
@@ -99,7 +99,7 @@ const Sell = () => {
               id="display"
               type="text"
               placeholder="Size in inches"
-              className="shadow-sm border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#66aaff] focus:border-[#66aaff]"
+              className="shadow-sm border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2"
             />
           </div>
 
