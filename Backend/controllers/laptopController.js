@@ -1,28 +1,38 @@
-const laptop = require('../models/laptop');
+const Laptop = require('../models/Laptop');
 
-exports.getAllLaptops = async (req, res) => {
-  const laptops = await laptop.find();
+const getLaptops = async (req, res) => {
+  const laptops = await Laptop.find().populate('seller', 'name email');
   res.json(laptops);
 };
 
-exports.getLaptopById = async (req, res) => {
-  const laptop = await laptop.findById(req.params.id);
-  if (!laptop) return res.status(404).json({ error: 'Laptop not found' });
+const getLaptopById = async (req, res) => {
+  const laptop = await Laptop.findById(req.params.id);
   res.json(laptop);
 };
 
-exports.createLaptop = async (req, res) => {
-  const newLaptop = new laptop(req.body);
-  await newLaptop.save();
-  res.status(201).json(newLaptop);
+const createLaptop = async (req, res) => {
+  const laptop = new Laptop({
+    ...req.body,
+    seller: req.user._id,
+  });
+  const created = await laptop.save();
+  res.status(201).json(created);
 };
 
-exports.updateLaptop = async (req, res) => {
-  const updatedLaptop = await laptop.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.json(updatedLaptop);
+const updateLaptop = async (req, res) => {
+  const updated = await Laptop.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.json(updated);
 };
 
-exports.deleteLaptop = async (req, res) => {
-  await laptop.findByIdAndDelete(req.params.id);
+const deleteLaptop = async (req, res) => {
+  await Laptop.findByIdAndDelete(req.params.id);
   res.json({ message: 'Laptop deleted' });
+};
+
+module.exports = {
+  getLaptops,
+  getLaptopById,
+  createLaptop,
+  updateLaptop,
+  deleteLaptop,
 };
